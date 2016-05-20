@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>xcclean by hectique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">xcclean</h1>
+      <h2 class="project-tagline">A CLI tool to help recovering disk space from Xcode</h2>
+      <a href="https://github.com/hectique/xcclean" class="btn">View on GitHub</a>
+      <a href="https://github.com/hectique/xcclean/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/hectique/xcclean/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="xcclean" class="anchor" href="#xcclean" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>xcclean</h1>
+
+<p>Helps you to recover disk space from Xcode. Based on <a href="https://blog.neverthesamecolor.net/how-to-recover-disk-space-from-xcode/">this blog post</a>.</p>
+
+<h1>
+<a id="synopis" class="anchor" href="#synopis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Synopis</h1>
+
+<pre><code>xcclean [derived_data|device_support|archives|simulators|documentation] [show|delete|delete_all]
+</code></pre>
+
+<h1>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description</h1>
+
+<p><code>xcclean</code> displays disk usage for various sets of data Xcode accumulates over time. This data can be deleted by <code>xcclean</code> as well.</p>
+
+<h2>
+<a id="installing-xcclean" class="anchor" href="#installing-xcclean" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installing xcclean</h2>
+
+<p>The recommended way of installing <code>xcclean</code> is via Homebrew.</p>
+
+<pre><code>brew install xcclean
+</code></pre>
+
+<p>Alternatively, the source code can be downloaded and compiled manually.</p>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h2>
+
+<p><code>derived_data</code></p>
+
+<p>Data about projects which includes index, build output and logs. </p>
+
+<p><code>device_support</code></p>
+
+<p>Information about devices that have been used for development. Will be recreated by Xcode when a device is attached.</p>
+
+<p><code>archives</code></p>
+
+<p>Archives of release builds. Should be treated with care to not delete archives for which the dSYM data for debugging is still needed.</p>
+
+<p><code>simulators</code></p>
+
+<p>Simulators are stored in different folders per device and iOS version.</p>
+
+<p><code>documentation</code></p>
+
+<p>DocSets downloaded by Xcode.</p>
+
+<h3>
+<a id="available-actions" class="anchor" href="#available-actions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Available Actions</h3>
+
+<p><code>show</code></p>
+
+<p>Displays a list of folders with their disk usage prefixed. Will contain additional detail information for the cases of <code>device_support</code> and <code>simulators</code> to make identification of the data easier.</p>
+
+<p><code>delete</code></p>
+
+<p>Deletes the specified directory. Expects to be followed by the directory name displayed in the second column of the <code>show</code> command.</p>
+
+<p><code>delete_all</code></p>
+
+<p>Deletes <strong>all</strong> directories for specified option.</p>
+
+<h4>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h4>
+
+<p>Show all directories containing derived data:</p>
+
+<pre><code>xcclean derived_data show
+</code></pre>
+
+<p>Delete a specific derived data directory:</p>
+
+<pre><code>xcclean derived_data delete 0359B714-8C54-4A9B-8EDE-1D6ACB686B59
+</code></pre>
+
+<p>Delete all derived data:</p>
+
+<pre><code>xcclean derived_data delete_all
+</code></pre>
+
+<h1>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About</h1>
+
+<ul>
+<li>Author: Sascha M Holesch &lt;<a href="">https://github.com/hectique</a>&gt;</li>
+<li>Issue tracker: This project's source code and issue tracker can be found at <a href="">https://github.com/hectique/xcclean</a>
+</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/hectique/xcclean">xcclean</a> is maintained by <a href="https://github.com/hectique">hectique</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
