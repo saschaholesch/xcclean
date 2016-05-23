@@ -47,7 +47,7 @@ struct XCClean {
      Displays the usage explanation.
      */
     func printUsage() {
-        print("XCode Cleaner v1.0")
+        print("XCode Cleaner v1.0.1")
         print("")
         print("Usage: xcclean data_type action item")
         print("")
