@@ -14,13 +14,15 @@ xcclean [derived_data|device_support|archives|simulators|documentation] [show|de
 
 ## Installing xcclean
 
-The recommended way of installing `xcclean` is via Homebrew.
+Just `brew tap hectique/homebrew-ntsc` and then `brew install xcclean`.
+
+If the formula conflicts with one from Homebrew/homebrew or another tap, you can `brew install hectique/homebrew-ntsc/xcclean`.
+
+You can also install via URL:
 
 ```
-brew install xcclean
+brew install https://raw.githubusercontent.com/hectique/homebrew-ntsc/master/xcclean.rb
 ```
-
-Alternatively, the source code can be downloaded and compiled manually.
 
 ## Options
 
