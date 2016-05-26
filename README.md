@@ -82,5 +82,5 @@ xcclean derived_data delete_all
 
 # About
 
-* Author: Sascha M Holesch <[https://github.com/hectique]()>
-* Issue tracker: This project's source code and issue tracker can be found at [https://github.com/hectique/xcclean]()
+* Author: Sascha M Holesch <[https://github.com/saschaholesch]()>
+* Issue tracker: This project's source code and issue tracker can be found at [https://github.com/saschaholesch/xcclean]()
